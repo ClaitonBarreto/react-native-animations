@@ -20,7 +20,7 @@ const useColorAnimation = ({colors}:Props) => {
     function anime(duration:number, reverse?:boolean) {
         Animated.timing(componentRef, {
             toValue: reverse ? 0 : colors.length-1,
-            useNativeDriver: true,
+            useNativeDriver: false,
             duration
         }).start() 
     }
